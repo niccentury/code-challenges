@@ -33,7 +33,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  return arr[2].items[1.quantity];
+  return arr[2].items[1].quantity;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -55,7 +55,13 @@ const howManyTreats = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const battleship = (board, row, col) => {
-  // Solution code here...
+  let checkBoard = board[row][col];
+  if (checkBoard === '#'){
+    return 'hit';
+  }
+  else{
+    return 'miss';
+  }
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -69,7 +75,13 @@ const battleship = (board, row, col) => {
 // ------------------------------------------------------------------------------------------------
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let sum = 1;
+  numbers.forEach(element => {
+    element.forEach(num => {
+      sum *= num;
+    });
+  });
+  return sum;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -221,22 +233,22 @@ const minesweeper = (board) => {
 //   });
 // });
 
-describe('Testing challenge 2', () => {
-  test('It should return the number 24', () => {
-    expect(howManyTreats(errands)).toStrictEqual(24);
-  });
-  test('It should also work for other arrays of objects', () => {
-    expect(howManyTreats([0,0,{items: [0, {quantity: 7,}],}])).toStrictEqual(7);
-  });
-});
+// describe('Testing challenge 2', () => {
+//   test('It should return the number 24', () => {
+//     expect(howManyTreats(errands)).toStrictEqual(24);
+//   });
+//   test('It should also work for other arrays of objects', () => {
+//     expect(howManyTreats([0,0,{items: [0, {quantity: 7,}],}])).toStrictEqual(7);
+//   });
+// });
 
-describe('Testing challenge 3', () => {
-  const battleshipData = [
-    ['#', ' ', '#', ' '],
-    ['#', ' ', '#', ' '],
-    ['#', ' ', ' ', ' '],
-    [' ', ' ', '#', '#']
-  ];
+// describe('Testing challenge 3', () => {
+//   const battleshipData = [
+//     ['#', ' ', '#', ' '],
+//     ['#', ' ', '#', ' '],
+//     ['#', ' ', ' ', ' '],
+//     [' ', ' ', '#', '#']
+//   ];
 
 //   test('It should return "hit" when it hits a boat', () => {
 //     expect(battleship(battleshipData, 0, 0)).toStrictEqual('hit');
@@ -249,18 +261,18 @@ describe('Testing challenge 3', () => {
 //   });
 // });
 
-// describe('Testing challenge 4', () => {
-//   test('It should multiply all the numbers together', () => {
-//     expect(calculateProduct([[1,2], [3,4], [5,6]])).toStrictEqual(720);
-//   });
+describe('Testing challenge 4', () => {
+  test('It should multiply all the numbers together', () => {
+    expect(calculateProduct([[1,2], [3,4], [5,6]])).toStrictEqual(720);
+  });
 
-//   test('It should return zero if there are any zeroes in the data', () => {
-//     expect(calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]])).toStrictEqual(0);
-//   });
-//   test('It should work even if some of the arrays contain no numbers', () => {
-//     expect(calculateProduct([[1,2], [], [3,4,5]])).toStrictEqual(120);
-//   });
-// });
+  test('It should return zero if there are any zeroes in the data', () => {
+    expect(calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]])).toStrictEqual(0);
+  });
+  test('It should work even if some of the arrays contain no numbers', () => {
+    expect(calculateProduct([[1,2], [], [3,4,5]])).toStrictEqual(120);
+  });
+});
 
 // describe('Testing challenge 5', () => {
 //   test('It should calculate and return the average temperature of the data set', () => {
