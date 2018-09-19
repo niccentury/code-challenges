@@ -22,7 +22,7 @@ const sortBackwards = (nums) => {
 // ------------------------------------------------------------------------------------------------
 
 const alphabetize = (strings) => {
-  return string.sort();
+  return strings.sort();
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ const sortByLength = (strings) => {
 // ------------------------------------------------------------------------------------------------
 
 const alphabetizeBetter = (strs) => {
-  return strs.sort((a, b) =>  a.toUppercase() > b.toUppercase());
+  return strs.sort((a, b) => a.toUppercase() > b.toUppercase());
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -227,66 +227,66 @@ describe('Testing challenge 5', () => {
   });
 });
 
-// describe('Testing challenge 6', () => {
-//   test('It should sort numbers by their length', () => {
-//     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
-//     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
-//     expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]));
-//   });
-// });
+// // describe('Testing challenge 6', () => {
+// //   test('It should sort numbers by their length', () => {
+// //     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
+// //     expect(sortNumbersByLength([100, 2.82, 1, -47.75])).toStrictEqual([1, 100, 2.82, -47.75]);
+// //     expect(sortNumbersByLength([1,2,3])).toEqual(expect.arrayContaining([1,2,3]));
+// //   });
+// // });
 
-// describe('Testing challenge 7', () => {
-//   test('It should sort people by their last names', () => {
-//     expect(sortPeople(people)).toStrictEqual([
-//       new Person('Casey', 'Codefellow', 38),
-//       new Person('Stan', 'Seattle', 67),
-//       new Person('Wes', 'Washington', 25)
-//     ]);
-//     expect(sortPeople([{lastName: 'banana',}, {lastName: 'apple',}]))
-//       .toStrictEqual([{lastName: 'apple',}, {lastName: 'banana',}]);
-//   });
-// });
+// // describe('Testing challenge 7', () => {
+// //   test('It should sort people by their last names', () => {
+// //     expect(sortPeople(people)).toStrictEqual([
+// //       new Person('Casey', 'Codefellow', 38),
+// //       new Person('Stan', 'Seattle', 67),
+// //       new Person('Wes', 'Washington', 25)
+// //     ]);
+// //     expect(sortPeople([{lastName: 'banana',}, {lastName: 'apple',}]))
+// //       .toStrictEqual([{lastName: 'apple',}, {lastName: 'banana',}]);
+// //   });
+// // });
 
-// describe('Testing challenge 8', () => {
-//   test('It should sort people with more strict ordering', () => {
-//     const family = [
-//       new Person('Casey', 'Codefellows', 55),
-//       new Person('Casey', 'Codefellows', 37),
-//       new Person('Charlie', 'Codefellows', 21),
-//       new Person('Charles', 'Codefellows', 29),
-//       new Person('Carol', 'Codefellow', 88)
-//     ];
-//     expect(sortPeopleBetter(family)).toStrictEqual([
-//       new Person('Carol', 'Codefellow', 88),
-//       new Person('Casey', 'Codefellows', 37),
-//       new Person('Casey', 'Codefellows', 55),
-//       new Person('Charles', 'Codefellows', 29),
-//       new Person('Charlie', 'Codefellows', 21)
-//     ]);
-//     expect(sortPeopleBetter([{firstName: 'andrew', lastName: 'apple',}, {firstName: 'andre', lastName: 'apple',}]))
-//       .toStrictEqual([{firstName: 'andre', lastName: 'apple',}, {firstName: 'andrew', lastName: 'apple',}]);
-//   });
-// });
+// // describe('Testing challenge 8', () => {
+// //   test('It should sort people with more strict ordering', () => {
+// //     const family = [
+// //       new Person('Casey', 'Codefellows', 55),
+// //       new Person('Casey', 'Codefellows', 37),
+// //       new Person('Charlie', 'Codefellows', 21),
+// //       new Person('Charles', 'Codefellows', 29),
+// //       new Person('Carol', 'Codefellow', 88)
+// //     ];
+// //     expect(sortPeopleBetter(family)).toStrictEqual([
+// //       new Person('Carol', 'Codefellow', 88),
+// //       new Person('Casey', 'Codefellows', 37),
+// //       new Person('Casey', 'Codefellows', 55),
+// //       new Person('Charles', 'Codefellows', 29),
+// //       new Person('Charlie', 'Codefellows', 21)
+// //     ]);
+// //     expect(sortPeopleBetter([{firstName: 'andrew', lastName: 'apple',}, {firstName: 'andre', lastName: 'apple',}]))
+// //       .toStrictEqual([{firstName: 'andre', lastName: 'apple',}, {firstName: 'andrew', lastName: 'apple',}]);
+// //   });
+// // });
 
-// describe('Testing challenge 9', () => {
-//   test('It should sort meetings by the day on which they happen', () => {
-//     const sortedMeetings = sortMeetingsByDay(meetings);
-//     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
-//     expect(sortedMeetings[2]).toStrictEqual(new Meeting('Tuesday', '1145', '1315'));
-//     expect(sortedMeetings.slice(3,5)).toEqual(expect.arrayContaining([new Meeting('Wednesday', '0930', '1000'), new Meeting('Wednesday', '1300', '1500')]));
-//     expect(sortedMeetings[5]).toStrictEqual(new Meeting('Friday', '1200', '1345'));
-//   });
-// });
+// // describe('Testing challenge 9', () => {
+// //   test('It should sort meetings by the day on which they happen', () => {
+// //     const sortedMeetings = sortMeetingsByDay(meetings);
+// //     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
+// //     expect(sortedMeetings[2]).toStrictEqual(new Meeting('Tuesday', '1145', '1315'));
+// //     expect(sortedMeetings.slice(3,5)).toEqual(expect.arrayContaining([new Meeting('Wednesday', '0930', '1000'), new Meeting('Wednesday', '1300', '1500')]));
+// //     expect(sortedMeetings[5]).toStrictEqual(new Meeting('Friday', '1200', '1345'));
+// //   });
+// // });
 
-// describe('Testing challenge 10', () => {
-//   test('It should sort meetings by when they happen', () => {
-//     expect(sortSchedule(meetings)).toStrictEqual([
-//       new Meeting('Monday', '0900', '0945'),
-//       new Meeting('Monday', '0900', '1000'),
-//       new Meeting('Tuesday', '1145', '1315'),
-//       new Meeting('Wednesday', '0930', '1000'),
-//       new Meeting('Wednesday', '1300', '1500'),
-//       new Meeting('Friday', '1200', '1345')
-//     ]);
-//   });
-// });
+// // describe('Testing challenge 10', () => {
+// //   test('It should sort meetings by when they happen', () => {
+// //     expect(sortSchedule(meetings)).toStrictEqual([
+// //       new Meeting('Monday', '0900', '0945'),
+// //       new Meeting('Monday', '0900', '1000'),
+// //       new Meeting('Tuesday', '1145', '1315'),
+// //       new Meeting('Wednesday', '0930', '1000'),
+// //       new Meeting('Wednesday', '1300', '1500'),
+// //       new Meeting('Friday', '1200', '1345')
+// //     ]);
+// //   });
+// // });
