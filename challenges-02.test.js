@@ -27,10 +27,14 @@ const alkiBeach = [ 33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17 ];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (hours, stores) => {
-    cookieStores = cookieStores[0];
-    for(i = 0; i < cookieStores.length; i++){
-        for(n = 0; n < )
+  let hourlySales = [];
+  for(let i = 0; i < hoursOpen.length; i++){
+    let hourlyTotal = 0;
+    for(let x = 0; x < cookieStores.length; i++){
+      hourlyTotal += cookieStores[x][i];
     };
+    hourlySales.push(hourlyTotal);
+  };
 };
 
 
@@ -47,7 +51,11 @@ const grandTotal = (hours, stores) => {
 // ------------------------------------------------------------------------------------------------
 
 const salesData = (data) => {
-  // Solution code here...
+  let objectArray = [];
+  data.forEach((el, i) => {
+    objectArray.push({sales: `${el} cookies`, time: hour[i],});
+  });
+  return objectArray;
 };
 
 // ------------------------------------------------------------------------------------------------
