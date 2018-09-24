@@ -15,7 +15,7 @@
 // ------------------------------------------------------------------------------------------------
 
 const isNum = (num) => {
-  // Solution code here...
+  return /\d/.test(num);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ const isNum = (num) => {
 // ------------------------------------------------------------------------------------------------
 
 const isCapitalized = (string) => {
-  // Solution code here...
+  return string.match(/\b[A-Z]\w+/g);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ const isCapitalized = (string) => {
 // ------------------------------------------------------------------------------------------------
 
 const citiesAtoJ = (cities) => {
-  // Solution code here...
+  return cities.filter((city) => /^[A-J]/.test(city));
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@ const citiesAtoJ = (cities) => {
 // ------------------------------------------------------------------------------------------------
 
 const matchMonth = (input) => {
-  // Solution code here...
+  return /^(0|o)ct(ober)?$/.test(input);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ const matchMonth = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const noPunctuation = input => {
-  // Solution code here...
+  return input.match(/\b\w+\s/g);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -89,7 +89,7 @@ const noPunctuation = input => {
 // ------------------------------------------------------------------------------------------------
 
 let hangman = (str) => {
-  // Solution code here...
+  return str.replace(/(a|e|i|o|u)/gi, '_');
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -182,7 +182,7 @@ describe('Testing challenge 5', () => {
   });
 
   test('It should not contain words that are followed by any non-space character', () => {
-    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.'])
+    expect(noPunctuation(lorem)).not.toContain(['amet,', 'elit.', 'egestas.', 'elit,', 'sed.', 'sem,', 'diam.', 'nibh.', 'porttitor.', 'euismod,', 'ultrices.', 'massa,', 'vel,', 'purus.', 'purus,', 'odio.', 'aliquet,', 'non,', 'sem.']);
   });
 });
 
